@@ -9,11 +9,16 @@ echo Virtual environment created.
 call venv\Scripts\activate
 
 :: Install dependencies
-pip install streamlit yfinance pandas numpy scikit-learn xgboost plotly matplotlib seaborn joblib python-dotenv pyyaml requests tensorflow streamlit-option-menu plotly-resampler
+pip install --upgrade pip
+pip install pytest streamlit yfinance pandas numpy scikit-learn xgboost plotly matplotlib seaborn joblib python-dotenv pyyaml requests streamlit-option-menu plotly-resampler
 
+echo.
 echo Setup completed!
 echo.
 echo To run the application:
 echo venv\Scripts\activate
 echo streamlit run stock_ui.py
+echo.
+echo To run tests:
+echo python -m pytest tests/ -v
 pause
